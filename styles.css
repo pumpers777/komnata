@@ -45,6 +45,10 @@ img {
     object-position: 8% center;
   }
 
+  img.sixxpm-neck {
+    object-position: center 40%;
+  }
+
   img.sixxpm-model {
     object-position: 78% center;
   }
@@ -163,18 +167,22 @@ h1 {
   line-height: 1.45;
 }
 
+.contacts {
+  min-height: 100svh;
+  justify-content: flex-start;
+}
+
 .email-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   width: 100%;
-  margin-top: 28px;
+  margin-top: 0;
   padding: 18px 0 12px;
   border-bottom: 1px solid var(--ink);
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  scroll-margin-top: 18vh;
 }
 
 .email-arrow {
@@ -208,9 +216,11 @@ h1 {
 }
 
 #latests,
-#komnata {
+#komnata,
+#contacts {
   scroll-margin-top: 0;
 }
+
 
 @media (max-width: 800px) {
   .nav {
@@ -236,11 +246,15 @@ h1 {
   }
 
   .sheet p + p {
-    margin-top: 0;
+    margin-top: 1.7em;
+  }
+
+  .contacts {
+    padding-top: 28px;
   }
 
   .email-link {
-    margin-top: 36px;
+    margin-top: 0;
     padding: 0 0 10px;
     font-size: 13px;
     letter-spacing: 0.04em;

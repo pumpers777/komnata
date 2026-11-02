@@ -13,9 +13,8 @@ const bindReel = (root) => {
   const view = root.querySelector(".reel-view");
   const track = root.querySelector(".reel-track");
   if (!view || !track) return;
-  const slides = [...track.children];
-  const last = slides.length - 1;
-  if (last < 1) return;
+  const slidesOf = () =>
+    [...track.children].filter((slide) => getComputedStyle(slide).display !== "none");
 
   let index = 0;
   let drag = null;
@@ -25,7 +24,7 @@ const bindReel = (root) => {
 
   const size = () => {
     const width = widthOf();
-    slides.forEach((slide) => {
+    slidesOf().forEach((slide) => {
       slide.style.flex = `0 0 ${width}px`;
       slide.style.width = `${width}px`;
     });
@@ -39,6 +38,7 @@ const bindReel = (root) => {
   };
 
   const go = (next) => {
+    const last = Math.max(0, slidesOf().length - 1);
     index = Math.max(0, Math.min(last, next));
     drag = null;
     view.classList.remove("is-drag");
@@ -118,7 +118,9 @@ const bindReel = (root) => {
 
   view.addEventListener("pointerup", release);
   view.addEventListener("pointercancel", release);
-  window.addEventListener("resize", () => render(false));
+  window.addEventListener("resize", () => {
+    go(index);
+  });
 };
 
 document.querySelectorAll(".reel").forEach(bindReel);
