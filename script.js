@@ -1,11 +1,12 @@
 document.querySelectorAll('.nav a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
-    const id = link.getAttribute("href");
+    const label = link.textContent.trim();
+    const id = label === "contacts" ? "#komnata" : link.getAttribute("href");
     const target = id && document.querySelector(id);
     if (!target) return;
     event.preventDefault();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
-    history.pushState(null, "", id);
+    history.pushState(null, "", label === "contacts" ? "#contacts" : id);
   });
 });
 

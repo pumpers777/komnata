@@ -68,11 +68,14 @@ a {
 }
 
 .intro {
-  min-height: 100svh;
+  height: 100lvh;
+  min-height: 100lvh;
+  min-height: -webkit-fill-available;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--paper);
+  overflow: hidden;
 }
 
 .nav {
@@ -144,6 +147,7 @@ a {
 }
 
 .sheet {
+  height: 100svh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -167,17 +171,12 @@ h1 {
   line-height: 1.45;
 }
 
-.contacts {
-  min-height: 100svh;
-  justify-content: flex-start;
-}
-
 .email-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   width: 100%;
-  margin-top: 0;
+  margin-top: auto;
   padding: 18px 0 12px;
   border-bottom: 1px solid var(--ink);
   font-size: 13px;
@@ -207,8 +206,8 @@ h1 {
 }
 
 .legal {
-  margin-top: auto !important;
-  padding-top: 64px;
+  margin-top: 28px !important;
+  padding-top: 0;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   line-height: 1.45 !important;
@@ -216,8 +215,7 @@ h1 {
 }
 
 #latests,
-#komnata,
-#contacts {
+#komnata {
   scroll-margin-top: 0;
 }
 
@@ -249,12 +247,8 @@ h1 {
     margin-top: 1.7em;
   }
 
-  .contacts {
-    padding-top: 28px;
-  }
-
   .email-link {
-    margin-top: 0;
+    margin-top: auto;
     padding: 0 0 10px;
     font-size: 13px;
     letter-spacing: 0.04em;
@@ -279,8 +273,13 @@ h1 {
   }
 
   .legal {
-    padding-top: 48px;
+    margin-top: 22px !important;
     font-size: 10px !important;
+  }
+
+  .intro {
+    height: 100lvh;
+    min-height: 100lvh;
   }
 
   .reel-label {
