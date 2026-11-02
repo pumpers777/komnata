@@ -176,7 +176,7 @@ h1 {
   align-items: center;
   gap: 8px;
   width: 100%;
-  margin-top: auto;
+  margin-top: 36px;
   padding: 18px 0 12px;
   border-bottom: 1px solid var(--ink);
   font-size: 13px;
@@ -206,8 +206,8 @@ h1 {
 }
 
 .legal {
-  margin-top: 28px !important;
-  padding-top: 0;
+  margin-top: auto !important;
+  padding-top: 48px;
   font-size: 11px !important;
   letter-spacing: 0.04em;
   line-height: 1.45 !important;
@@ -244,11 +244,11 @@ h1 {
   }
 
   .sheet p + p {
-    margin-top: 1.7em;
+    margin-top: 1.15em;
   }
 
   .email-link {
-    margin-top: auto;
+    margin-top: 40px;
     padding: 0 0 10px;
     font-size: 13px;
     letter-spacing: 0.04em;
@@ -273,7 +273,8 @@ h1 {
   }
 
   .legal {
-    margin-top: 22px !important;
+    margin-top: auto !important;
+    padding-top: 24px;
     font-size: 10px !important;
   }
 
