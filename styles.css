@@ -174,20 +174,26 @@ h1 {
 .email-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
   width: 100%;
   margin-top: 36px;
   padding: 18px 0 12px;
   border-bottom: 1px solid var(--ink);
   font-size: 13px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
+.email-label {
+  letter-spacing: 0.08em;
+  margin-right: -0.08em;
+}
+
 .email-arrow {
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   flex: 0 0 auto;
+  margin-left: 1px;
   overflow: visible;
 }
 
@@ -227,43 +233,51 @@ h1 {
   }
 
   .sheet {
-    padding: 28px 22px 28px;
+    padding: 24px 22px 22px;
   }
 
   h1 {
-    margin: 0 0 22px;
-    font-size: 32px;
-    letter-spacing: -0.025em;
+    margin: 0 0 28px;
+    font-size: 34px;
+    letter-spacing: -0.03em;
   }
 
   .sheet p {
     margin: 0;
     max-width: none;
     font-size: 16px;
-    line-height: 1.42;
+    line-height: 1.4;
   }
 
   .sheet p + p {
-    margin-top: 1.15em;
+    margin-top: 0.45em;
   }
 
   .email-link {
-    margin-top: 40px;
-    padding: 0 0 10px;
-    font-size: 13px;
-    letter-spacing: 0.04em;
+    margin-top: 36px;
+    padding: 0 0 11px;
+    font-size: 12px;
+    letter-spacing: 0;
+    gap: 2px;
+  }
+
+  .email-label {
+    letter-spacing: 0.1em;
+    margin-right: -0.1em;
   }
 
   .email-arrow {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
+    margin-left: 2px;
+    transform: translateY(-0.5px);
   }
 
   .meta-row {
     gap: 8px;
-    margin-top: 22px;
+    margin-top: 26px;
     font-size: 11px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     flex-wrap: nowrap;
   }
 
