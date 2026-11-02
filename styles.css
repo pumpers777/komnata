@@ -35,6 +35,29 @@ img {
   pointer-events: none;
 }
 
+@media (max-width: 800px) {
+  img {
+    object-fit: cover;
+    object-position: center 18%;
+  }
+
+  img.sixxpm-door {
+    object-position: 8% center;
+  }
+
+  img.sixxpm-model {
+    object-position: 78% center;
+  }
+
+  img[src*="runaways-2"] {
+    object-position: center 42%;
+  }
+
+  img[src*="runaways-3"] {
+    object-position: center 20%;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
