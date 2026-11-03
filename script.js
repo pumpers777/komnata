@@ -1,13 +1,20 @@
 document.querySelectorAll('.nav a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
-    const label = link.textContent.trim();
-    const id = label === "contacts" ? "#komnata" : link.getAttribute("href");
+    const id = link.getAttribute("href");
     const target = id && document.querySelector(id);
     if (!target) return;
     event.preventDefault();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
-    history.pushState(null, "", label === "contacts" ? "#contacts" : id);
+    history.pushState(null, "", id);
   });
+});
+
+document.querySelectorAll(".film-video").forEach((video) => {
+  video.muted = true;
+  const play = () => video.play().catch(() => {});
+  play();
+  video.addEventListener("canplay", play);
+  document.addEventListener("touchstart", play, { once: true, passive: true });
 });
 
 const bindReel = (root) => {
