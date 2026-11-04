@@ -108,36 +108,15 @@ a {
 }
 
 .brand .fill {
-  display: inline-grid;
-  grid-template-columns: 0fr;
-  animation: brand-breathe 6.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  display: block;
+  overflow: hidden;
+  width: 0;
+  flex: 0 0 auto;
 }
 
 .brand .fill > span {
-  overflow: hidden;
-  min-width: 0;
+  display: block;
   white-space: nowrap;
-}
-
-@keyframes brand-breathe {
-  0%,
-  16% {
-    grid-template-columns: 0fr;
-  }
-  32%,
-  64% {
-    grid-template-columns: 1fr;
-  }
-  80%,
-  100% {
-    grid-template-columns: 0fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .brand .fill {
-    animation: none;
-  }
 }
 
 .feed {
