@@ -111,8 +111,25 @@ a {
   display: block;
   overflow: hidden;
   flex: 0 0 auto;
-  max-width: 0;
-  animation: brand-breathe 5.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  width: 0;
+  --open: 0.72em;
+  animation: brand-breathe 8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.brand .fill:nth-child(3) {
+  --open: 1.05em;
+}
+
+.brand .fill:nth-child(6) {
+  --open: 0.34em;
+}
+
+.brand .fill:nth-child(8) {
+  --open: 1.9em;
+}
+
+.brand .fill:nth-child(12) {
+  --open: 1.2em;
 }
 
 .brand .fill > span {
@@ -123,15 +140,15 @@ a {
 
 @keyframes brand-breathe {
   0% {
-    max-width: 0;
+    width: 0;
   }
-  18%,
-  52% {
-    max-width: 3.4em;
+  32%,
+  58% {
+    width: var(--open);
   }
-  70%,
+  90%,
   100% {
-    max-width: 0;
+    width: 0;
   }
 }
 

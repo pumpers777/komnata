@@ -1,3 +1,19 @@
+const sizeBrand = () => {
+  document.querySelectorAll(".brand .fill").forEach((el) => {
+    const probe = el.firstElementChild;
+    if (!probe) return;
+    const copy = probe.cloneNode(true);
+    copy.style.cssText =
+      "position:absolute;left:-9999px;top:0;display:block;width:auto;white-space:nowrap;visibility:hidden;";
+    document.body.append(copy);
+    const open = Math.ceil(copy.getBoundingClientRect().width);
+    copy.remove();
+    if (open) el.style.setProperty("--open", `${open}px`);
+  });
+};
+sizeBrand();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeBrand);
+
 document.querySelectorAll('.nav a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const id = link.getAttribute("href");
