@@ -2,7 +2,6 @@
   --ink: #111111;
   --paper: #ffffff;
   --font: Inter, Helvetica, Arial, sans-serif;
-  --nav-h: 56px;
 }
 
 *,
@@ -69,18 +68,14 @@ a {
 }
 
 .intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 30;
-  height: auto;
-  min-height: var(--nav-h);
+  height: 100lvh;
+  min-height: 100lvh;
+  min-height: -webkit-fill-available;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 20px;
   background: var(--paper);
+  overflow: hidden;
 }
 
 .nav {
@@ -183,7 +178,7 @@ a {
 
 .reel-label {
   position: absolute;
-  top: calc(var(--nav-h) + 10px);
+  top: 22px;
   left: 22px;
   z-index: 3;
   margin: 0;
@@ -242,8 +237,8 @@ a {
   display: flex;
   flex-direction: column;
   background: var(--paper);
-  padding: calc(var(--nav-h) + 28px) 64px 48px;
-  scroll-margin-top: var(--nav-h);
+  padding: 72px 64px 48px;
+  scroll-margin-top: 0;
 }
 
 h1 {
@@ -313,7 +308,7 @@ h1 {
 #latests,
 #cinema,
 #contacts {
-  scroll-margin-top: var(--nav-h);
+  scroll-margin-top: 0;
 }
 
 .break {
@@ -327,7 +322,7 @@ h1 {
   }
 
   .sheet {
-    padding: calc(var(--nav-h) + 12px) 20px 22px;
+    padding: 22px 20px 22px;
   }
 
   h1 {
@@ -392,8 +387,13 @@ h1 {
     font-size: 10px !important;
   }
 
+  .intro {
+    height: 100lvh;
+    min-height: 100lvh;
+  }
+
   .reel-label {
-    top: calc(var(--nav-h) + 8px);
+    top: 18px;
     left: 18px;
     font-size: 12px;
     font-weight: 400;
