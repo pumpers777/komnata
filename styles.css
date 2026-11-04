@@ -101,10 +101,14 @@ a {
 .brand {
   display: inline-flex;
   align-items: baseline;
+  font-kerning: none;
+  font-feature-settings: "kern" 0;
+  letter-spacing: 0.08em;
 }
 
 .brand .keep {
   flex: 0 0 auto;
+  letter-spacing: 0.08em;
 }
 
 .brand .fill {
@@ -137,6 +141,8 @@ a {
   display: block;
   width: max-content;
   white-space: nowrap;
+  letter-spacing: 0.08em;
+  font-kerning: none;
 }
 
 @keyframes brand-breathe {

@@ -3,8 +3,8 @@ const sizeBrand = () => {
     const probe = el.firstElementChild;
     if (!probe) return;
     const copy = probe.cloneNode(true);
-    copy.style.cssText =
-      "position:absolute;left:-9999px;top:0;display:block;width:auto;white-space:nowrap;visibility:hidden;";
+    const type = getComputedStyle(probe);
+    copy.style.cssText = `position:absolute;left:-9999px;top:0;display:block;width:auto;white-space:nowrap;visibility:hidden;font:${type.font};letter-spacing:${type.letterSpacing};`;
     document.body.append(copy);
     const open = Math.ceil(copy.getBoundingClientRect().width);
     copy.remove();
