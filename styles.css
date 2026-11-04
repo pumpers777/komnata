@@ -110,7 +110,7 @@ a {
 .brand .fill {
   display: inline-grid;
   grid-template-columns: 0fr;
-  transition: grid-template-columns 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: brand-breathe 6.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .brand .fill > span {
@@ -119,11 +119,24 @@ a {
   white-space: nowrap;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .nav-brand:hover .fill,
-  .nav-brand:focus-visible .fill,
-  .nav-brand:focus .fill {
+@keyframes brand-breathe {
+  0%,
+  16% {
+    grid-template-columns: 0fr;
+  }
+  32%,
+  64% {
     grid-template-columns: 1fr;
+  }
+  80%,
+  100% {
+    grid-template-columns: 0fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand .fill {
+    animation: none;
   }
 }
 
