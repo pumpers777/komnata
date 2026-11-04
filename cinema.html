@@ -14,57 +14,138 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=53" />
+    <link rel="stylesheet" href="styles.css?v=54" />
   </head>
-  <body class="cinema-page">
-    <header class="page-bar">
+  <body>
+    <header class="intro" id="top">
       <nav class="nav" aria-label="Primary">
-        <a href="index.html">wrmgmt</a>
+        <a href="#top">wrmgmt</a>
         <a href="index.html#latests">latests</a>
-        <a href="cinema.html">cinema</a>
-        <a href="index.html#contacts">contacts</a>
+        <a href="#cinema">cinema</a>
+        <a href="#contacts">contacts</a>
       </nav>
     </header>
 
-    <main class="cinema" aria-label="Cinema">
-      <article class="film">
-        <p class="reel-label">ANKA</p>
-        <video class="film-video" muted loop playsinline autoplay preload="auto" poster="assets/cinema/anka.jpg">
-          <source src="assets/cinema/anka.mp4" type="video/mp4" />
-        </video>
-      </article>
-      <article class="film">
-        <p class="reel-label">RESPIRATORY DEPRESSION</p>
-        <video class="film-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/respiratory.jpg">
-          <source src="assets/cinema/respiratory.mp4" type="video/mp4" />
-        </video>
-      </article>
-      <article class="film">
-        <p class="reel-label">UNWTR BACK</p>
-        <video class="film-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-back.jpg">
-          <source src="assets/cinema/unwtr-back.mp4" type="video/mp4" />
-        </video>
-      </article>
-      <article class="film">
-        <p class="reel-label">UNWTR GRAND LOBBY</p>
-        <video class="film-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-lobby.jpg">
-          <source src="assets/cinema/unwtr-lobby.mp4" type="video/mp4" />
-        </video>
-      </article>
-      <article class="film">
-        <p class="reel-label">UNWTR REEL 1</p>
-        <video class="film-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-reel-1.jpg">
-          <source src="assets/cinema/unwtr-reel-1.mp4" type="video/mp4" />
-        </video>
-      </article>
-      <article class="film">
-        <p class="reel-label">UNWTR REEL 4</p>
-        <video class="film-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-reel-4.jpg">
-          <source src="assets/cinema/unwtr-reel-4.mp4" type="video/mp4" />
-        </video>
-      </article>
+    <main>
+      <section class="feed" id="cinema" aria-label="Cinema">
+        <article class="project">
+          <div class="reel">
+            <p class="reel-label">ANKA</p>
+            <div class="reel-view">
+              <div class="reel-track">
+                <figure>
+                  <video class="reel-video" muted loop playsinline autoplay preload="auto" poster="assets/cinema/anka.jpg">
+                    <source src="assets/cinema/anka.mp4" type="video/mp4" />
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="reel">
+            <p class="reel-label">RESPIRATORY DEPRESSION</p>
+            <div class="reel-view">
+              <div class="reel-track">
+                <figure>
+                  <video class="reel-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/respiratory.jpg">
+                    <source src="assets/cinema/respiratory.mp4" type="video/mp4" />
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="reel">
+            <p class="reel-label">UNWTR BACK</p>
+            <div class="reel-view">
+              <div class="reel-track">
+                <figure>
+                  <video class="reel-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-back.jpg">
+                    <source src="assets/cinema/unwtr-back.mp4" type="video/mp4" />
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="reel">
+            <p class="reel-label">UNWTR GRAND LOBBY</p>
+            <div class="reel-view">
+              <div class="reel-track">
+                <figure>
+                  <video class="reel-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-lobby.jpg">
+                    <source src="assets/cinema/unwtr-lobby.mp4" type="video/mp4" />
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="reel">
+            <p class="reel-label">UNWTR REEL 1</p>
+            <div class="reel-view">
+              <div class="reel-track">
+                <figure>
+                  <video class="reel-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-reel-1.jpg">
+                    <source src="assets/cinema/unwtr-reel-1.mp4" type="video/mp4" />
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="reel">
+            <p class="reel-label">UNWTR REEL 4</p>
+            <div class="reel-view">
+              <div class="reel-track">
+                <figure>
+                  <video class="reel-video" muted loop playsinline autoplay preload="metadata" poster="assets/cinema/unwtr-reel-4.jpg">
+                    <source src="assets/cinema/unwtr-reel-4.mp4" type="video/mp4" />
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="sheet" id="contacts">
+        <h1>Production team</h1>
+        <p>
+          Мы работаем с визуальным языком моды<span class="break"></span>
+          и продюсируем съёмки от первой идеи до финального<span class="break"></span>
+          кадра. Нам интересны новые имена, свежие подходы<span class="break"></span>
+          и бренды, которым есть что сказать.
+        </p>
+        <p>
+          Мы знаем, сколько теряется между хорошей идеей<span class="break"></span>
+          и её реализацией, поэтому собираем процесс<span class="break"></span>
+          целиком и доводим его до результата.<span class="break"></span>
+          Каждый проект начинается с задачи и получает<span class="break"></span>
+          собственный подход.
+        </p>
+        <a class="email-link" href="mailto:saytokomnata@gmail.com"><span class="email-label">EMAIL</span><svg class="email-arrow" viewBox="0 0 10 10" aria-hidden="true"><path d="M2.2 7.8 L7.8 2.2 M3.4 2.2 H7.8 V6.6" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="butt" stroke-linejoin="miter"/></svg></a>
+        <div class="meta-row">
+          <span>ST. PETERSBURG / WORLDWIDE</span>
+          <span>01—03</span>
+        </div>
+        <p class="legal">
+          © WRMGMT 2026<br />
+          WE ARE MANAGEMENT
+        </p>
+      </section>
     </main>
 
-    <script src="script.js?v=53"></script>
+    <script src="script.js?v=54"></script>
   </body>
 </html>

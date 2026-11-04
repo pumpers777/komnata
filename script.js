@@ -9,13 +9,26 @@ document.querySelectorAll('.nav a[href^="#"]').forEach((link) => {
   });
 });
 
-document.querySelectorAll(".film-video").forEach((video) => {
+const videos = [...document.querySelectorAll(".reel-video")];
+videos.forEach((video) => {
   video.muted = true;
   const play = () => video.play().catch(() => {});
-  play();
   video.addEventListener("canplay", play);
   document.addEventListener("touchstart", play, { once: true, passive: true });
 });
+if (videos.length) {
+  const watch = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      });
+    },
+    { threshold: 0.45 }
+  );
+  videos.forEach((video) => watch.observe(video));
+}
 
 const bindReel = (root) => {
   const view = root.querySelector(".reel-view");
