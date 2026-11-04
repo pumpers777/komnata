@@ -89,6 +89,44 @@ a {
   opacity: 0.45;
 }
 
+.nav-brand {
+  white-space: nowrap;
+}
+
+.nav-brand:hover,
+.nav-brand:focus-visible {
+  opacity: 1;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.brand .keep {
+  flex: 0 0 auto;
+}
+
+.brand .fill {
+  display: inline-grid;
+  grid-template-columns: 0fr;
+  transition: grid-template-columns 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.brand .fill > span {
+  overflow: hidden;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-brand:hover .fill,
+  .nav-brand:focus-visible .fill,
+  .nav-brand:focus .fill {
+    grid-template-columns: 1fr;
+  }
+}
+
 .feed {
   background: #000;
 }
