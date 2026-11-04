@@ -110,13 +110,29 @@ a {
 .brand .fill {
   display: block;
   overflow: hidden;
-  width: 0;
   flex: 0 0 auto;
+  max-width: 0;
+  animation: brand-breathe 5.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .brand .fill > span {
   display: block;
+  width: max-content;
   white-space: nowrap;
+}
+
+@keyframes brand-breathe {
+  0% {
+    max-width: 0;
+  }
+  18%,
+  52% {
+    max-width: 3.4em;
+  }
+  70%,
+  100% {
+    max-width: 0;
+  }
 }
 
 .feed {

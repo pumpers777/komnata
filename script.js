@@ -1,33 +1,3 @@
-const playBrand = () => {
-  document.querySelectorAll(".brand .fill").forEach((el) => {
-    el.getAnimations().forEach((anim) => anim.cancel());
-    const inner = el.firstElementChild;
-    if (!inner) return;
-    el.style.width = "auto";
-    const open = Math.ceil(inner.getBoundingClientRect().width);
-    el.style.width = "0px";
-    if (!open) return;
-    el.animate(
-      [
-        { width: "0px", offset: 0, easing: "linear" },
-        { width: "0px", offset: 0.16, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
-        { width: `${open}px`, offset: 0.32, easing: "linear" },
-        { width: `${open}px`, offset: 0.64, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
-        { width: "0px", offset: 0.8, easing: "linear" },
-        { width: "0px", offset: 1 },
-      ],
-      {
-        duration: 6400,
-        iterations: Infinity,
-      }
-    );
-  });
-};
-
-playBrand();
-if (document.fonts && document.fonts.ready) document.fonts.ready.then(playBrand);
-window.addEventListener("resize", playBrand);
-
 document.querySelectorAll('.nav a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const id = link.getAttribute("href");
